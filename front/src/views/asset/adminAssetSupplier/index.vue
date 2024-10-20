@@ -85,7 +85,7 @@
             <!-- 分页器,可控制每页显示的条数 -->
             <Page :current="searchForm.pageNumber" :total="total" :page-size="searchForm.pageSize" @on-change="changePage" @on-page-size-change="changePageSize" :page-size-opts="[10, 20, 50]" size="small" show-total show-elevator show-sizer></Page>
         </Row>
-        <div class="spanTS">
+        <!-- <div class="spanTS">
             <span style="color:#ff9900;font-size:22px;">
                 1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             </span>
@@ -104,7 +104,7 @@
             <span style="color:#ff9900;font-size:22px;">
                 6. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             </span>
-        </div>
+        </div> -->
     </Card>
 </div>
 </template>

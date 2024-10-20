@@ -1,8 +1,8 @@
 <template>
 <div @click="lockScreen" class="lock-screen-btn-con">
-    <Tooltip content="锁屏" placement="bottom">
+    <!-- <Tooltip content="锁屏" placement="bottom">
         <Icon type="md-lock" :size="24"></Icon>
-    </Tooltip>
+    </Tooltip> -->
 </div>
 </template>
 
