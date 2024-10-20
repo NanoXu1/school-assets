@@ -15,7 +15,7 @@
                     <Row class="loginRow">
                         <Tabs v-model="tabName" @on-click="changeTabName" class="loginTab">
                             <TabPane label="账号密码登陆" name="userAndPassword">
-                                <Form ref="usernameLoginForm" :model="form" :rules="usernameLoginFormRules" class="form">
+                                <Form ref="usernameLoginForm" :model="form" :rules="usernameLoginFormRules" class="form" >
                                     <FormItem prop="username" class="loginInput">
                                         <Row>
                                             <Input v-model="form.username" size="large" clearable placeholder="登陆账号" autocomplete="off">
@@ -38,11 +38,11 @@
                                         </Row>
                                     </FormItem>
                                 </Form>
-                                <Row type="flex" justify="space-between" align="middle">
+                                <Row type="flex" justify="space-between" align="middle" style="margin-inline: 35%;">
                                     <Checkbox v-model="saveLogin" size="large">是否自动登陆</Checkbox>
-                                    <router-link to="/regist">
+                                    <!-- <router-link to="/regist">
                                         <a class="forget-pass">没有账号？点我注册</a>
-                                    </router-link>
+                                    </router-link> -->
                                 </Row>
                                 <Row>
                                     <Button class="login-btn" type="primary" size="large" :loading="loading" @click="submitLogin" long>
@@ -51,9 +51,9 @@
                                     </Button>
                                 </Row>
                             </TabPane>
-                            <TabPane label="企业微信扫码" name="mobile">
-                                <div id="qywxsmqywxsm"></div>
-                            </TabPane>
+                            <!-- <TabPane label="企业微信扫码" name="mobile"> -->
+                                <!-- <div id="qywxsmqywxsm"></div> -->
+                            <!-- </TabPane> -->
                         </Tabs>
 
                     </Row>
@@ -286,6 +286,8 @@ a:hover {
         margin: 0 auto;
         background-color: #83c9c7;
         overflow: hidden;
+        background-image: url(../assets/login/bg.jpg);
+        background-repeat: round;
         // background: linear-gradient(45deg, rgba(2, 173, 168, 0.17), rgba(0, 221, 215, 0.17)); 
     }
 
@@ -301,7 +303,7 @@ a:hover {
         width: 560px;
         height: 684px;
         margin-top: -20px;
-        background-image: url(../assets/login/star.png);
+        // background-image: url(../assets/login/star.png);
         background-repeat: no-repeat;
         background-position: left bottom;
     }
@@ -366,6 +368,7 @@ a:hover {
 
     .ivu-tabs-bar {
         border-bottom: 0px;
+        margin-inline: 25%;
     }
 
     .login-btn {

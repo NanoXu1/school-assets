@@ -329,9 +329,7 @@ public class PermissionController {
         List<UserRole> userRoleList = iUserRoleService.list(urQw);
         List<Permission> permissionList = new ArrayList<>();
         for (UserRole userRole : userRoleList) {
-            QueryWrapper<RolePermission> rpQw = new QueryWrapper<>();
-            rpQw.eq("role_id",userRole.getRoleId());
-            List<RolePermission> rolePermissionList = iRolePermissionService.list(rpQw);
+            List<RolePermission> rolePermissionList = iRolePermissionService.getRolePermissionByRoleId(userRole.getRoleId());
             for (RolePermission rolePermission : rolePermissionList) {
                 boolean flag = true;
                 for (Permission permission : permissionList) {

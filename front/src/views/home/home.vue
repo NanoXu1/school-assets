@@ -40,42 +40,42 @@
                     </div>
                 </div>
                 <!--分隔线 -->
-                <div class="shu"></div>
+                <!-- <div class="shu"></div> -->
                 <!--右侧3按钮 -->
-                <div class="threeButton">
+                <!-- <div class="threeButton"> -->
                     <!--按钮1 -->
-                    <div class="button" @click="toDaiBanPage">
-                        <div class="left">
+                    <!-- <div class="button" @click="toDaiBanPage"> -->
+                        <!-- <div class="left"> -->
                             <!--图片1 -->
-                            <img class="homeThreeIcon" src="../../assets/homeIcon1.png" />
+                            <!-- <img class="homeThreeIcon" src="../../assets/homeIcon1.png" /> -->
                             <!--内容1 -->
-                            <span class="text">我的待办</span>
-                        </div>
-                    </div>
+                            <!-- <span class="text">我的待办</span> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
                     <!--按钮2 -->
-                    <div class="button" @click="toFaQiPage">
-                        <div class="left">
-                            <!--图片2 -->
-                            <img class="homeThreeIcon" src="../../assets/homeIcon2.png" />
+                    <!-- <div class="button" @click="toFaQiPage"> -->
+                        <!-- <div class="left"> -->
+                            <!-- 图片2 -->
+                            <!-- <img class="homeThreeIcon" src="../../assets/homeIcon2.png" /> -->
                             <!--内容2 -->
-                            <span class="text">我的未办</span>
-                        </div>
-                    </div>
+                            <!-- <span class="text">我的未办</span> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
                     <!--按钮3 -->
-                    <div class="button" @click="toJingBanPage">
-                        <div class="left">
+                    <!-- <div class="button" @click="toJingBanPage"> -->
+                        <!-- <div class="left"> -->
                             <!--图片3 -->
-                            <img class="homeThreeIcon" src="../../assets/homeIcon3.png" />
+                            <!-- <img class="homeThreeIcon" src="../../assets/homeIcon3.png" /> -->
                             <!--内容3 -->
-                            <span class="text">我的经办</span>
-                        </div>
-                    </div>
-                </div>
+                            <!-- <span class="text">我的经办</span> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
             <!--左下角提升语句，点击跳转盒子-->
-            <div class="bottomText" @click="toOwnMenu">
+            <!--<div class="bottomText" @click="toOwnMenu">
                 添加"常用模块"? 点我 进入个人门户设置
-            </div>
+            </div>-->
         </div>
     </Row>
 </div>
@@ -241,9 +241,9 @@ export default {
 }
 
 .addMenuBox {
-    width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 

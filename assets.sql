@@ -1,5 +1,5 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
@@ -8,39 +8,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 DROP DATABASE IF EXISTS `assets`;
-CREATE DATABASE IF NOT EXISTS `assets` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_croatian_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `assets` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `assets`;
 
 DROP TABLE IF EXISTS `a_admin_asset`;
 CREATE TABLE IF NOT EXISTS `a_admin_asset` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `bm` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `bzdw` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `cc` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `bm` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `bzdw` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cc` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `cgj` decimal(19,2) DEFAULT NULL,
-  `cz` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `gg` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `gys` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `gys_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `image_url` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `jldw` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `mrck` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `mrck_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `cz` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gg` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gys` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gys_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image_url` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `jldw` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `mrck` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `mrck_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `qr_code` int DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` bit(1) DEFAULT NULL,
-  `syfw` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `type` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `xh` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `syfw` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `xh` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `xsj` decimal(19,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_asset`;
 INSERT INTO `a_admin_asset` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `bm`, `bzdw`, `cc`, `cgj`, `cz`, `gg`, `gys`, `gys_name`, `image_url`, `jldw`, `mrck`, `mrck_name`, `name`, `qr_code`, `remark`, `status`, `syfw`, `type`, `xh`, `xsj`) VALUES
@@ -49,34 +49,34 @@ INSERT INTO `a_admin_asset` (`id`, `create_by`, `create_time`, `del_flag`, `upda
 
 DROP TABLE IF EXISTS `a_admin_assets`;
 CREATE TABLE IF NOT EXISTS `a_admin_assets` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `buy_date` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `buy_number` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `demand` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `destroy_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `destroy_time` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `give_id` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `give_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `give_type` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `model` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `buy_date` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `buy_number` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `demand` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `destroy_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `destroy_time` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `give_id` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `give_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `give_type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `money` decimal(19,2) DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `no` int NOT NULL,
   `out_flag` int NOT NULL,
-  `out_time` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `out_work` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `spec` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `out_time` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `out_work` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `spec` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` int NOT NULL,
-  `unit` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `warehouse` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `unit` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `warehouse` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_assets`;
 INSERT INTO `a_admin_assets` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `buy_date`, `buy_number`, `demand`, `destroy_name`, `destroy_time`, `give_id`, `give_name`, `give_type`, `model`, `money`, `name`, `no`, `out_flag`, `out_time`, `out_work`, `remark`, `spec`, `status`, `unit`, `warehouse`) VALUES
@@ -88,38 +88,38 @@ INSERT INTO `a_admin_assets` (`id`, `create_by`, `create_time`, `del_flag`, `upd
 
 DROP TABLE IF EXISTS `a_admin_assets_buy`;
 CREATE TABLE IF NOT EXISTS `a_admin_assets_buy` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `asset_id` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `asset_id` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `audit_flag` int NOT NULL,
-  `bm` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `bzdw` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `cc` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `cz` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `gys` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `gys_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `image_url` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `bm` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `bzdw` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cc` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cz` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gys` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gys_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image_url` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `max_money` decimal(19,2) DEFAULT NULL,
   `min_money` decimal(19,2) DEFAULT NULL,
-  `model` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `mrck` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `mrck_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `mrck` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `mrck_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `quantity` decimal(19,2) DEFAULT NULL,
   `quantity2` decimal(19,2) DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `spec` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `spec` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `submit_flag` int NOT NULL,
-  `syfw` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `type` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `unit` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `syfw` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `unit` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `ware_flag` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_assets_buy`;
 INSERT INTO `a_admin_assets_buy` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `asset_id`, `audit_flag`, `bm`, `bzdw`, `cc`, `cz`, `gys`, `gys_name`, `image_url`, `max_money`, `min_money`, `model`, `mrck`, `mrck_name`, `name`, `quantity`, `quantity2`, `remark`, `spec`, `submit_flag`, `syfw`, `type`, `unit`, `ware_flag`) VALUES
@@ -128,20 +128,20 @@ INSERT INTO `a_admin_assets_buy` (`id`, `create_by`, `create_time`, `del_flag`, 
 
 DROP TABLE IF EXISTS `a_admin_assets_repair`;
 CREATE TABLE IF NOT EXISTS `a_admin_assets_repair` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `asset_id` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `asset_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `asset_type` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `asset_ware` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `repair_id` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `repair_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `asset_id` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `asset_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `asset_type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `asset_ware` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `repair_id` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `repair_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_assets_repair`;
 INSERT INTO `a_admin_assets_repair` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `asset_id`, `asset_name`, `asset_type`, `asset_ware`, `repair_id`, `repair_name`) VALUES
@@ -149,22 +149,22 @@ INSERT INTO `a_admin_assets_repair` (`id`, `create_by`, `create_time`, `del_flag
 
 DROP TABLE IF EXISTS `a_admin_asset_supplier`;
 CREATE TABLE IF NOT EXISTS `a_admin_asset_supplier` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `address` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `bm` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `mobile` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `bm` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `mobile` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` bit(1) NOT NULL,
-  `type` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `url` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_asset_supplier`;
 INSERT INTO `a_admin_asset_supplier` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `address`, `bm`, `mobile`, `name`, `remark`, `status`, `type`, `url`) VALUES
@@ -173,18 +173,18 @@ INSERT INTO `a_admin_asset_supplier` (`id`, `create_by`, `create_time`, `del_fla
 
 DROP TABLE IF EXISTS `a_admin_asset_unit`;
 CREATE TABLE IF NOT EXISTS `a_admin_asset_unit` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `bm` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `bm` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_asset_unit`;
 INSERT INTO `a_admin_asset_unit` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `bm`, `name`, `remark`, `status`) VALUES
@@ -198,20 +198,20 @@ INSERT INTO `a_admin_asset_unit` (`id`, `create_by`, `create_time`, `del_flag`, 
 
 DROP TABLE IF EXISTS `a_admin_asset_ware`;
 CREATE TABLE IF NOT EXISTS `a_admin_asset_ware` (
-  `id` varchar(255) COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `address` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `admin_id` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `admin_name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  `remark` varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `admin_id` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `admin_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_admin_asset_ware`;
 INSERT INTO `a_admin_asset_ware` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `address`, `admin_id`, `admin_name`, `name`, `remark`, `status`) VALUES
@@ -232,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `a_department` (
   `title` varchar(255) DEFAULT NULL,
   `is_parent` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_department`;
 INSERT INTO `a_department` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `parent_id`, `sort_order`, `status`, `title`, `is_parent`) VALUES
@@ -262,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `a_department_header` (
   `type` tinyint(1) DEFAULT NULL,
   `user_id` bigint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_department_header`;
 
@@ -279,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `a_dict` (
   `type` varchar(255) DEFAULT NULL,
   `sort_order` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_dict`;
 INSERT INTO `a_dict` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `description`, `title`, `type`, `sort_order`) VALUES
@@ -304,7 +304,7 @@ CREATE TABLE IF NOT EXISTS `a_dict_data` (
   `value` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `sort_order` (`sort_order`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_dict_data`;
 INSERT INTO `a_dict_data` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `description`, `dict_id`, `sort_order`, `status`, `title`, `value`) VALUES
@@ -349,7 +349,7 @@ CREATE TABLE IF NOT EXISTS `a_file` (
   `location` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `create_time` (`create_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_file`;
 INSERT INTO `a_file` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `name`, `size`, `type`, `url`, `f_key`, `location`) VALUES
@@ -382,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `a_log` (
   `device` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `create_time` (`create_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_log`;
 INSERT INTO `a_log` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `cost_time`, `ip`, `ip_info`, `name`, `request_param`, `request_type`, `request_url`, `username`, `log_type`, `code`, `device`) VALUES
@@ -600,7 +600,7 @@ CREATE TABLE IF NOT EXISTS `a_permission` (
   `status` tinyint(1) DEFAULT NULL,
   `show_always` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_permission`;
 INSERT INTO `a_permission` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `description`, `name`, `parent_id`, `type`, `sort_order`, `component`, `path`, `title`, `icon`, `level`, `button_type`, `status`, `show_always`) VALUES
@@ -655,7 +655,7 @@ CREATE TABLE IF NOT EXISTS `a_role` (
   `description` varchar(255) DEFAULT NULL,
   `data_type` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_role`;
 INSERT INTO `a_role` (`id`, `create_by`, `create_time`, `update_by`, `update_time`, `name`, `del_flag`, `default_role`, `description`, `data_type`) VALUES
@@ -674,7 +674,7 @@ CREATE TABLE IF NOT EXISTS `a_role_permission` (
   `permission_id` bigint unsigned DEFAULT NULL,
   `role_id` bigint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_role_permission`;
 INSERT INTO `a_role_permission` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `permission_id`, `role_id`) VALUES
@@ -737,7 +737,7 @@ CREATE TABLE IF NOT EXISTS `a_setting` (
   `update_time` datetime DEFAULT NULL,
   `value` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_setting`;
 INSERT INTO `a_setting` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `value`) VALUES
@@ -749,19 +749,19 @@ INSERT INTO `a_setting` (`id`, `create_by`, `create_time`, `del_flag`, `update_b
 
 DROP TABLE IF EXISTS `a_student`;
 CREATE TABLE IF NOT EXISTS `a_student` (
-  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `number` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `school` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `school` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `age` decimal(19,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_student`;
 INSERT INTO `a_student` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `name`, `number`, `school`, `sex`, `age`) VALUES
@@ -772,23 +772,23 @@ INSERT INTO `a_student` (`id`, `create_by`, `create_time`, `del_flag`, `update_b
 
 DROP TABLE IF EXISTS `a_teacher`;
 CREATE TABLE IF NOT EXISTS `a_teacher` (
-  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci NOT NULL,
-  `create_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `create_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `create_time` datetime(6) DEFAULT NULL,
   `del_flag` int NOT NULL,
-  `update_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `update_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `update_time` datetime(6) DEFAULT NULL,
   `age` decimal(19,2) DEFAULT NULL,
-  `autograph` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `education` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `graduated` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
-  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `autograph` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `education` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `graduated` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `wages` decimal(19,2) DEFAULT NULL,
-  `resume` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci DEFAULT NULL,
+  `resume` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 DELETE FROM `a_teacher`;
 INSERT INTO `a_teacher` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `age`, `autograph`, `education`, `graduated`, `name`, `remark`, `status`, `wages`, `resume`) VALUES
@@ -808,10 +808,10 @@ CREATE TABLE IF NOT EXISTS `a_user` (
   `update_time` datetime DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `avatar` varchar(255) DEFAULT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `mobile` varchar(255) DEFAULT NULL,
-  `nickname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nickname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL,
   `status` int DEFAULT NULL,
@@ -829,7 +829,7 @@ CREATE TABLE IF NOT EXISTS `a_user` (
   UNIQUE KEY `email` (`email`) USING BTREE,
   UNIQUE KEY `mobile` (`mobile`) USING BTREE,
   KEY `create_time` (`create_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_user`;
 INSERT INTO `a_user` (`id`, `create_by`, `create_time`, `update_by`, `update_time`, `address`, `avatar`, `description`, `email`, `mobile`, `nickname`, `password`, `sex`, `status`, `type`, `username`, `del_flag`, `department_id`, `street`, `pass_strength`, `department_title`, `birth`, `my_door`) VALUES
@@ -849,7 +849,7 @@ CREATE TABLE IF NOT EXISTS `a_user_role` (
   `role_id` bigint unsigned DEFAULT NULL,
   `user_id` bigint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `a_user_role`;
 INSERT INTO `a_user_role` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `role_id`, `user_id`) VALUES
